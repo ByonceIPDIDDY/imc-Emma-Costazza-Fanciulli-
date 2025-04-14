@@ -6,8 +6,8 @@
     <title>RADICEPURA</title>
     <link rel="stylesheet" href="stili.css">
 </head>
-<body>
-    <div style="display: flex; align-items: center; flex-direction: column;">
+<body style="background: rgb(197, 196, 196); display: flex; justify-content: center;">
+    <div style="display: flex; align-items: center; flex-direction: column; background: white; width: min-content; padding: 10px;">
         <div class="container">
             <img src="https://www.aidap.org/wp-content/uploads/cropped-cropped-logo_aidap-1.png" alt="">
             <p>
@@ -32,6 +32,49 @@
                         <hx style="margin-left: 15px ; color: #149c27;">in chilogrammi (usare la virgola per i decimali)</hx>
                        </div>
                     </div>
+                    <div style="background-color: rgb(201, 201, 201); border-radius: 8px; ">
+                        <p style="margin-bottom: 0; margin-left: 15px; "> Altezza (m)*</p>
+                        <input type="text" placeholder="0" style="margin-left: 15px;">
+                       <div>
+                        <hx style="margin-left: 15px ; color: #149c27;">in metri (usare la virgola per i decimali)</hx>
+                       </div>
+                    </div>
+                    <div style="background-color: rgb(201, 201, 201); border-radius: 8px; ">
+                        <p style="margin-bottom: 0; margin-left: 15px; ">Indice di Massa Corporea (IMC)</p>
+                        <input type="text" placeholder="0" style="margin-left: 15px;">
+                       <div>
+                        <hx style="margin-left: 15px ; color: #149c27;">Formula: Peso (kg) / ( Altezza (m) * Altezza (m) )</hx>
+                       </div>
+                    </div>
+                    <div style="background-color: rgb(201, 201, 201); border-radius: 8px; ">
+                        <p style="margin-bottom: 0; margin-left: 15px; ">
+                            <div style="background-color: rgb(201, 201, 201); border-radius: 8px; ">
+                                <p style="margin-bottom: 0; margin-left: 15px; ">Secondo l'IMC sono:</p>
+                                <input type="text" placeholder="" style="margin-left: 15px;">
+                            </div>
+                        </p>
+                    </div>
+
+                    <h3>Classificazione dei livelli di peso in base all’IMC:</h3>
+                    <table style="border-collapse: collapse; width: 50%; border: 1px solid #ccc;">
+                        <tr style="background-color: #f2f2f2; border: 1px solid #ddd;">
+                            <td style="padding: 8px; text-align: left;">sottopeso</td>
+                            <td style="padding: 8px; text-align: left;"> <18,5 </td>
+                        </tr>
+                        <tr style="background-color: #fff; border: 1px solid #ddd;">
+                            <td style="padding: 8px;">normopeso</td>
+                            <td style="padding: 8px;">18,5-24,9</td>
+                        </tr>
+                        <tr style="background-color: #f9f9f9; border: 1px solid #ddd;">
+                            <td style="padding: 8px;">sovrapeso</td>
+                            <td style="padding: 8px;">	25-29,9</td>
+                        </tr>
+                        <tr style="background-color: #fff; border: 1px solid #ddd;">
+                            <td style="padding: 8px;">obesità</td>
+                            <td style="padding: 8px;">	>30 </td>
+                        </tr>
+                    </table>
+                    
                 </main>
                 <slidebar>
                     <input type="text" placeholder="Cerca">
@@ -64,7 +107,7 @@
         </div>
     
         
-            <footer>
+            <footer style="width: -webkit-fill-available;">
                 <div style="display: grid; grid-template-columns: 3fr repeat(2, 2fr); background: #303440; color: #ffffff;">
                     <div style="display: block;">
                         <img src="https://www.aidap.org/wp-content/uploads/aidap-logo.jpg" alt="" style="zoom: 55%;">
@@ -81,7 +124,24 @@
                            </div>
                         </div>
                     </div>
-    
+                    
+                    <div>
+                        <div style="margin-bottom: 15px; margin-top: 20px;">
+                            <span style="background: #149c27; color: white; padding: 6px 12px;">Associazione</span>
+                            <hr style="margin-top: 3px;margin-bottom: 0;border: solid #149c27 2px;">
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <div style="margin-bottom: 15px; margin-top: 20px;">
+                        <span style="background: #149c27; color: white; padding: 6px 12px;">Contattaci</span>
+                        <hr style="margin-top: 3px;margin-bottom: 0;border: solid #149c27 2px;">
+                    </div>
+                    <div style="margin-bottom: 15px; margin-top: 20px;">
+                        <span style="background: #149c27; color: white; padding: 6px 12px;">Servizio online</span>
+                        <hr style="margin-top: 3px;margin-bottom: 0;border: solid #149c27 2px;">
+                    </div></div>
                 </div>
             </footer> 
     </div>   
