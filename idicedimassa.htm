@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RADICEPURA</title>
+    <link rel="stylesheet" href="stili.css">
+</head>
+<body style="background: rgb(197, 196, 196); display: flex; justify-content: center;">
+    <div style="display: flex; align-items: center; flex-direction: column; background: white; width: min-content; padding: 10px;">
+        <div class="container">
+            <img src="https://www.aidap.org/wp-content/uploads/cropped-cropped-logo_aidap-1.png" alt="">
+            <p>
+                AIDAP è un'associazione indipendente autonoma, senza fini di lucro ed è riconosciuta come società medico scientifica dalla Federazione delle Società Medico Scientifiche Italiane (FISM). Ha lo scopo di condividere un certo tipo di conoscenza e cultura sulla prevenzione, educazione, trattamento e ricerca dei disturbi dell'alimentazione (anoressia nervosa, bulimia nervosa) e dell'obesità. Si propone di promuovere convegni, tavole rotonde, conferenze, gruppi di studio e altre attività di formazione nel campo medico, psicologico, scolastico e sociale.
+            </p>
+            <nav style="display: flex;justify-content: space-around;font-size: xx-large; background: #29ae33;">
+                <a href="http://" style="font-size: 1,324em; color: white; text-decoration: none;">home</a>
+                <a href="http://" style="font-size: 1,324em; color: white; text-decoration: none;">chi siamo</a>
+                <a href="http://" style="font-size: 1,324em; color: white; text-decoration: none;">contatti</a>
+            </nav>
+    
+            <div style="display: grid; grid-template-columns: 2fr 1fr;">
+                <main>
+                    <h2>Test online - IMC</h2>
+                    <h3>Calcola il tuo Indice di Massa Corporea</h3>
+                    <h5>L'IMC si calcola dividendo il peso in chilogrammi per il quadrato dell'altezza espresso in metri (kg/m2)</h5>
+    
+                    <div style="background-color: rgb(201, 201, 201); border-radius: 8px; ">
+                        <p style="margin-bottom: 0; margin-left: 15px; "> Peso (kg)*</p>
+                        <input id="Peso" type="text" placeholder="0" style="margin-left: 15px;">
+                       <div>
+                        <hx style="margin-left: 15px ; color: #149c27;">in chilogrammi (usare la virgola per i decimali)</hx>
+                       </div>
+                    </div>
+                    <div style="background-color: rgb(201, 201, 201); border-radius: 8px; ">
+                        <p style="margin-bottom: 0; margin-left: 15px; "> Altezza (m)*</p>
+                        <input id="Altezza" type="text" placeholder="0" style="margin-left: 15px;">
+                       <div>
+                        <hx style="margin-left: 15px ; color: #149c27;">in metri (usare la virgola per i decimali)</hx>
+                       </div>
+                    </div>
+                    <div style="background-color: rgb(201, 201, 201); border-radius: 8px; ">
+                        <p style="margin-bottom: 0; margin-left: 15px; ">Indice di Massa Corporea (IMC)</p>
+                        <input id="IMC" type="text" placeholder="0" style="margin-left: 15px;">
+                       <div>
+                        <hx style="margin-left: 15px ; color: #149c27;">Formula: Peso (kg) / ( Altezza (m) * Altezza (m) )</hx>
+                       </div>
+                    </div>
+                    <div style="background-color: rgb(201, 201, 201); border-radius: 8px; ">
+                        <p style="margin-bottom: 0; margin-left: 15px; ">
+                            <div style="background-color: rgb(201, 201, 201); border-radius: 8px; ">
+                                <p style="margin-bottom: 0; margin-left: 15px; ">Secondo l'IMC sono:</p>
+                                <input id="out" type="text" placeholder="" style="margin-left: 15px;">
+                            </div>
+                        </p>
+                    </div>
+
+                    <h3>Classificazione dei livelli di peso in base all’IMC:</h3>
+                    <table style="border-collapse: collapse; width: 50%; border: 1px solid #ccc;">
+                        <tr style="background-color: #f2f2f2; border: 1px solid #ddd;">
+                            <td style="padding: 8px; text-align: left;">sottopeso</td>
+                            <td style="padding: 8px; text-align: left;"> <18,5 </td>
+                        </tr>
+                        <tr style="background-color: #fff; border: 1px solid #ddd;">
+                            <td style="padding: 8px;">normopeso</td>
+                            <td style="padding: 8px;">18,5-24,9</td>
+                        </tr>
+                        <tr style="background-color: #f9f9f9; border: 1px solid #ddd;">
+                            <td style="padding: 8px;">sovrapeso</td>
+                            <td style="padding: 8px;">	25-29,9</td>
+                        </tr>
+                        <tr style="background-color: #fff; border: 1px solid #ddd;">
+                            <td style="padding: 8px;">obesità</td>
+                            <td style="padding: 8px;">	>30 </td>
+                        </tr>
+                    </table>
+                    
+                </main>
+                <slidebar>
+                    <input type="text" placeholder="Cerca">
+    
+                    <div style="margin-bottom: 15px; margin-top: 20px;">
+                        <span style="background: #149c27; color: white; padding: 6px 12px;">Formazione</span>
+                        <hr style="margin-top: 3px;margin-bottom: 0;border: solid #149c27 2px;">
+                    </div>
+                    <img src="https://www.aidap.org/wp-content/uploads/banner-piccolo-.png" alt="" style="zoom: 50%;">
+    
+                    <div style="margin-bottom: 15px; margin-top: 20px;">
+                        <span style="background: #149c27; color: white; padding: 6px 12px;">Opuscoli informativi</span>
+                        <hr style="margin-top: 3px;margin-bottom: 0;border: solid #149c27 2px;">
+                    </div>
+                    <img src="https://www.aidap.org/wp-content/uploads/info-pazienti-1.png" alt="" style="zoom: 50%;">
+    
+                    <div style="margin-bottom: 15px; margin-top: 20px;">
+                        <span style="background: #149c27; color: white; padding: 6px 12px;">Download</span>
+                        <hr style="margin-top: 3px;margin-bottom: 0;border: solid #149c27 2px;">
+                    </div>
+                    <img src="https://www.aidap.org/wp-content/uploads/banner-infografiche.jpg" alt="" style="zoom: 50%;">
+    
+                    <div style="margin-bottom: 15px; margin-top: 20px;">
+                        <span style="background: #149c27; color: white; padding: 6px 12px;">I nostri centri</span>
+                        <hr style="margin-top: 3px;margin-bottom: 0;border: solid #149c27 2px;">
+                    </div>
+                    <img src="https://docs.google.com/drawings/d/e/2PACX-1vTxYR5Cl5b56kco6jXtaMTBuJrGqBYPLKZr5prQcnR9zy0dPVX7N8YtBfyp-JVfQB2f8d5IbgkmFRlu/pub?w=296&amp;h=369" alt="no image" style="zoom: 50%;">
+                </slidebar>
+            </div>
+        </div>
+    
+        
+            <footer style="width: -webkit-fill-available;">
+                <div style="display: grid; grid-template-columns: 3fr repeat(2, 2fr); background: #303440; color: #ffffff;">
+                    <div style="display: block;">
+                        <img src="https://www.aidap.org/wp-content/uploads/aidap-logo.jpg" alt="" style="zoom: 55%;">
+                        <p>Associazione Italiana Disturbi dell’Alimentazione e del Peso</p>
+                        <div style="display: flex; flex-direction: column;">
+                           <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#149c27"><path d="M480.21-480Q510-480 531-501.21t21-51Q552-582 530.79-603t-51-21Q450-624 429-602.79t-21 51Q408-522 429.21-501t51 21ZM480-191q119-107 179.5-197T720-549q0-105-68.5-174T480-792q-103 0-171.5 69T240-549q0 71 60.5 161T480-191Zm0 95Q323.03-227.11 245.51-339.55 168-452 168-549q0-134 89-224.5T479.5-864q133.5 0 223 90.5T792-549q0 97-77 209T480-96Zm0-456Z"/></svg> <hx>Via Sansovino 16 – 37138 Verona</hx>
+                           </div>
+                           <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#149c27"><path d="M763-145q-121-9-229.5-59.5T339-341q-86-86-135.5-194T144-764q-2-21 12.29-36.5Q170.57-816 192-816h136q17 0 29.5 10.5T374-779l24 106q2 13-1.5 25T385-628l-97 98q20 38 46 73t57.97 65.98Q422-361 456-335.5q34 25.5 72 45.5l99-96q8-8 20-11.5t25-1.5l107 23q17 5 27 17.5t10 29.5v136q0 21.43-16 35.71Q784-143 763-145ZM255-600l70-70-17.16-74H218q5 38 14 73.5t23 70.5Zm344 344q35.1 14.24 71.55 22.62Q707-225 744-220v-90l-75-16-70 70ZM255-600Zm344 344Z"/></svg> <hx>0458103915</hx>
+                           </div>
+                           <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#149c27"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg> <hx>info@aidap.org</hx>
+                           </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div style="margin-bottom: 15px; margin-top: 20px;">
+                            <span style="background: #149c27; color: white; padding: 6px 12px;">Associazione</span>
+                            <hr style="margin-top: 3px;margin-bottom: 0;border: solid #149c27 2px;">
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <div style="margin-bottom: 15px; margin-top: 20px;">
+                        <span style="background: #149c27; color: white; padding: 6px 12px;">Contattaci</span>
+                        <hr style="margin-top: 3px;margin-bottom: 0;border: solid #149c27 2px;">
+                    </div>
+                    <div style="margin-bottom: 15px; margin-top: 20px;">
+                        <span style="background: #149c27; color: white; padding: 6px 12px;">Servizio online</span>
+                        <hr style="margin-top: 3px;margin-bottom: 0;border: solid #149c27 2px;">
+                    </div></div>
+                </div>
+            </footer> 
+    </div>
+    
+    <script>
+        let Peso = document.getElementById("Peso")
+    </script>
+</body>
+</html>
