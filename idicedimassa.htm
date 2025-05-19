@@ -27,21 +27,21 @@
     
                     <div style="background-color: rgb(201, 201, 201); border-radius: 8px; ">
                         <p style="margin-bottom: 0; margin-left: 15px; "> Peso (kg)*</p>
-                        <input id="Peso" type="text" placeholder="0" style="margin-left: 15px;">
+                        <input id="Peso" oninput="Calcola()" type="text" placeholder="0" style="margin-left: 15px;">
                        <div>
                         <hx style="margin-left: 15px ; color: #149c27;">in chilogrammi (usare la virgola per i decimali)</hx>
                        </div>
                     </div>
                     <div style="background-color: rgb(201, 201, 201); border-radius: 8px; ">
                         <p style="margin-bottom: 0; margin-left: 15px; "> Altezza (m)*</p>
-                        <input id="Altezza" type="text" placeholder="0" style="margin-left: 15px;">
+                        <input id="Altezza" oninput="Calcola()" type="text" placeholder="0" style="margin-left: 15px;">
                        <div>
                         <hx style="margin-left: 15px ; color: #149c27;">in metri (usare la virgola per i decimali)</hx>
                        </div>
                     </div>
                     <div style="background-color: rgb(201, 201, 201); border-radius: 8px; ">
                         <p style="margin-bottom: 0; margin-left: 15px; ">Indice di Massa Corporea (IMC)</p>
-                        <input id="IMC" type="text" placeholder="0" style="margin-left: 15px;">
+                        <input id="IMC" type="text" readonly style="margin-left: 15px;">
                        <div>
                         <hx style="margin-left: 15px ; color: #149c27;">Formula: Peso (kg) / ( Altezza (m) * Altezza (m) )</hx>
                        </div>
@@ -50,7 +50,7 @@
                         <p style="margin-bottom: 0; margin-left: 15px; ">
                             <div style="background-color: rgb(201, 201, 201); border-radius: 8px; ">
                                 <p style="margin-bottom: 0; margin-left: 15px; ">Secondo l'IMC sono:</p>
-                                <input id="out" type="text" placeholder="" style="margin-left: 15px;">
+                                <input id="out" readonly type="text" style="margin-left: 15px;">
                             </div>
                         </p>
                     </div>
@@ -146,8 +146,40 @@
             </footer> 
     </div>
     
+    
     <script>
-        let Peso = document.getElementById("Peso")
-    </script>
+        // Riferimenti agli elementi HTML
+        let pesoInput = document.getElementById("Peso");
+        let altezzaInput = document.getElementById("Altezza");
+        let imcOutput = document.getElementById("IMC");
+        let txtOutput = document.getElementById('out');
+    
+  let altezza = document.getElementById("Altezza");
+  let imc = document.getElementById("IMC");
+  let txt_out = document.getElementById("txt_out");
+function Calcola() {
+    // Sostituisci la virgola con il punto per la conversione corretta
+    let pesoVal = parseFloat(pesoInput.value.replace(',', '.'));
+    let altezzaVal = parseFloat(altezzaInput.value.replace(',', '.'));
+
+    if (!isNaN(pesoVal) && !isNaN(altezzaVal) && pesoVal > 0 && altezzaVal > 0) {
+        let imcVal = pesoVal / (altezzaVal * altezzaVal);
+        imcOutput.value = imcVal.toFixed(2);
+
+        if (imcVal < 18.5) {
+            txtOutput.value = "Sottopeso";
+        } else if (imcVal < 25) {
+            txtOutput.value = "Normopeso";
+        } else if (imcVal < 30) {
+            txtOutput.value = "Sovrappeso";
+        } else {
+            txtOutput.value = "Obesità";
+        }
+    } else {
+        imcOutput.value = "";
+        txtOutput.value = "";
+    }
+}
+    </script>    
 </body>
 </html>
