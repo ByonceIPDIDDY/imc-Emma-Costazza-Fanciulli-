@@ -149,39 +149,34 @@
     
     <script>
         // Riferimenti agli elementi HTML
-        let pesoInput = document.getElementById("Peso");
-        let altezzaInput = document.getElementById("Altezza");
-        let imcOutput = document.getElementById("IMC");
-        let txtOutput = document.getElementById('out');
-    
-        // Funzione per calcolare l'IMC
-        function calcolaIMC() {
-            // Ottieni i valori di peso e altezza
-            let peso = parseFloat(pesoInput.value);
-            let altezza = parseFloat(altezzaInput.value);
-    
-            // Controlla che i valori siano validi
-            if (!isNaN(peso) && !isNaN(altezza) && peso > 0 && altezza > 0) {
-                // Calcola l'IMC
-                let imcVal = peso / (altezza * altezza);
+        const pesoInput = document.getElementById("Peso");
+        const altezzaInput = document.getElementById("Altezza");
+        const imcOutput = document.getElementById("IMC");
+        const txtOutput = document.getElementById("out");
+
+        function Calcola() {
+            // Sostituisci la virgola con il punto per la conversione corretta
+            const pesoVal = parseFloat(pesoInput.value.replace(',', '.'));
+            const altezzaVal = parseFloat(altezzaInput.value.replace(',', '.'));
+
+            if (!isNaN(pesoVal) && !isNaN(altezzaVal) && pesoVal > 0 && altezzaVal > 0) {
+                const imcVal = pesoVal / (altezzaVal * altezzaVal);
                 imcOutput.value = imcVal.toFixed(2);
-    
-                // Determina la categoria dell'IMC
+
                 if (imcVal < 18.5) {
                     txtOutput.value = "Sottopeso";
-                } else if (imcVal >= 18.5 && imcVal < 24.9) {
+                } else if (imcVal < 25) {
                     txtOutput.value = "Normopeso";
-                } else if (imcVal >= 25 && imcVal < 29.9) {
+                } else if (imcVal < 30) {
                     txtOutput.value = "Sovrappeso";
                 } else {
                     txtOutput.value = "Obesità";
                 }
             } else {
-                // Se i valori non sono validi, svuota i risultati
                 imcOutput.value = "";
                 txtOutput.value = "";
             }
         }
-    </script>    
+    </script>
 </body>
 </html>
